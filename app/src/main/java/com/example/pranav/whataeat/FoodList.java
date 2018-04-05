@@ -1,5 +1,6 @@
 package com.example.pranav.whataeat;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -70,6 +71,9 @@ public class FoodList extends AppCompatActivity {
                     @Override
                     public void onClick(View view, int position, boolean isLongclick) {
                         Toast.makeText(FoodList.this, "" + clickitem.getName(), Toast.LENGTH_LONG).show();
+                        Intent fooddetail=new Intent(FoodList.this,FoodDetail.class);
+                        fooddetail.putExtra("FoodID",recyclerAdapter.getRef(position).getKey());
+                        startActivity(fooddetail);
 
                     }
                 });
