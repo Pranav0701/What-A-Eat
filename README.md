@@ -1,2 +1,2 @@
 # What A Eat
-Restuarant Based App with FireBase
+Restuarant Based Android App with FireBase
